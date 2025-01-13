@@ -50,16 +50,13 @@ namespace UnityEngine.Animations.Rigging
         public Transform[] transforms
         {
             get { return m_Transforms; }
-#if UNITY_EDITOR
             set
             {
                 m_Transforms = value;
                 ExtractBones();
             }
-#endif
         }
 
-#if UNITY_EDITOR
         /// <summary>
         /// Bone described by two Transform references.
         /// </summary>
@@ -198,6 +195,5 @@ namespace UnityEngine.Animations.Rigging
             m_Bones = bonesList.ToArray();
             m_Tips = tipsList.ToArray();
         }
-#endif // UNITY_EDITOR
     }
 }
